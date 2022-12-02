@@ -51,7 +51,7 @@ The confusion matrix can be complicated in understanding. However, a simple grap
 Based on the Oversampling machine model we had a low TP, which is bad, and a high TN whigh is good. However, we had a low FN, which is good, but a high FP. Therefore, this model is inaccurately identifiying certain loans as risky, when they are not. This is a type I error. Therefore, this confusion matrix proves to not use this model.
 
 #### Classification Report
-![Screenshot](https://github.com/Sborresch/Credit_Risk_Analysis/blob/main/Oversampling/Confusion_Matrix.png)
+![Screenshot](https://github.com/Sborresch/Credit_Risk_Analysis/blob/main/Oversampling/Classification_Report.png)
 
 The classification report is used to measure the quality of each model's prediction abilities. Similarly to the confusion matrix, it measures TP, TN, FP, FN. The main thing to mention with this report is having a high precision ("pre") for each target ("high_risk" and "low_risk"). Here is an external [link](https://muthu.co/understanding-the-classification-report-in-sklearn/#:~:text=A%20Classification%20report%20is%20used,classification%20report%20as%20shown%20below.) for more information on classification reports.
 
