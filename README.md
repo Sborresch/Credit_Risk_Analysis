@@ -31,6 +31,7 @@ We will utilize the following algorithms to build our model:
       - Print the imbalanced classification report
       
 ### Findings
+#### Accuracy
   
 ## SMOTE Oversampling
 ### Steps to Build Model
