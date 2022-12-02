@@ -31,13 +31,49 @@ We will utilize the following algorithms to build our model:
       - Print the imbalanced classification report
       
 ### Findings
-#### Accuracy
+#### Accuracy Score
+![Screenshot](https://github.com/Sborresch/Credit_Risk_Analysis/blob/main/Oversampling/Accuracy_Score.png)
+
+#### Confusion Matrix
+
+#### Classification Report
   
 ## SMOTE Oversampling
 ### Steps to Build Model
+  1. Create training and target variables 
+      - Convert training variables to numerical values using get.dummies()
+      - Create target variables
+      - Check the balance of the target variables
+  4. Resample the Training Data
+      - Make predictions using LogisticRegression classifier
+      - Calculate the accuracy score
+      - Create the confusion matrix
+      - Print the imbalanced classification report
+      
+### Findings
+#### Accuracy Score
 
-## Undersampling
+#### Confusion Matrix
+
+#### Classification Report
+
 ### Steps to Build Model
+  1. Create training and target variables 
+      - Convert training variables to numerical values using get.dummies()
+      - Create target variables
+      - Check the balance of the target variables
+  4. Resample the Training Data
+      - Make predictions using LogisticRegression classifier
+      - Calculate the accuracy score
+      - Create the confusion matrix
+      - Print the imbalanced classification report
+      
+### Findings
+#### Accuracy Score
+
+#### Confusion Matrix
+
+#### Classification Report
 
 ## Combination Sampling
 ### Steps to Build Model
