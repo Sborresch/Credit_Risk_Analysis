@@ -174,15 +174,83 @@ The classification report is used to measure the quality of each model's predict
 
 Based on this model's classification report there is good predictability for low_risk credit loans but a poor predictability for high_risk credit loans. For this reason we will forgo using this model.
 
-
-
-
-
 ## Forest Classifier
 ### Steps to Build Model
+  1. Create training and target variables 
+      - Convert training variables to numerical values using get.dummies()
+      - Create target variables
+      - Check the balance of the target variables
+  4. Resample the Training Data
+      - Make predictions using LogisticRegression classifier
+      - Calculate the accuracy score
+      - Create the confusion matrix
+      - Print the imbalanced classification report
+
+### Findings
+#### Accuracy Score
+![Screenshot](https://github.com/Sborresch/Credit_Risk_Analysis/blob/main/Forest%20Classifier/Forest_Accuracy_Score.png)
+
+It is important to note the accuracy rate of each machine learning model as this is what will provide justification for using this model. According to Kirsten Barkved from the [obviously.ai company](https://www.obviously.ai/post/machine-learning-model-performance#:~:text=Good%20accuracy%20in%20machine%20learning,not%20only%20ideal%2C%20it%27s%20realistic.), an accuracy rate above 70% is great model performance. Therefore, we should look at accuracy scores within the 70%-100% range.
+
+This machine learning model shows a 78% accuracy rate, which falls within our chosen accuracy range. For this reason, this model is an option for us to use.
+
+#### Confusion Matrix
+![Screenshot](https://github.com/Sborresch/Credit_Risk_Analysis/blob/main/Forest%20Classifier/Forest_Confusion_Matrix.png)
+
+The confusion matrix can be complicated in understanding. However, a simple graph from [Anuganti Suresch from the Medium company](https://medium.com/analytics-vidhya/what-is-a-confusion-matrix-d1c0f8feda5) shows how to understand this matrix. This matrix's purpose is to define a models performance, especially those with imbalanced datasets. A good model should prove a matrix with a high TP ("True Positive") and TN ("True Negative") value. While having a low FP ("False Positive") and FN (False Negative) value.
+
+- TP = when actual and predicted is positive
+- TN = when actual and predicted is negative
+- FP = when actual is negative and predicted is positive
+- FN = when acutal is positive and predicted is negative
+
+Based on the Oversampling machine model we had a low TP, which is bad, and a high TN whigh is good. However, we had a low FN, which is good, but a high FP. Therefore, this model is inaccurately identifiying certain loans as risky, when they are not. This is a type I error. Therefore, this confusion matrix proves to not use this model.
+
+#### Classification Report
+![Screenshot](https://github.com/Sborresch/Credit_Risk_Analysis/blob/main/Forest%20Classifier/Forest_Classification_Report.png)
+
+The classification report is used to measure the quality of each model's prediction abilities. Similarly to the confusion matrix, it measures TP, TN, FP, FN. The main thing to mention with this report is having a high precision ("pre") for each target ("high_risk" and "low_risk"). Here is an external [link](https://muthu.co/understanding-the-classification-report-in-sklearn/#:~:text=A%20Classification%20report%20is%20used,classification%20report%20as%20shown%20below.) for more information on classification reports.
+
+Based on this model's classification report there is good predictability for low_risk credit loans but a poor predictability for high_risk credit loans. For this reason we will forgo using this model.
 
 ## AdaBoost Classifier
 ### Steps to Build Model
+  1. Create training and target variables 
+      - Convert training variables to numerical values using get.dummies()
+      - Create target variables
+      - Check the balance of the target variables
+  4. Resample the Training Data
+      - Make predictions using LogisticRegression classifier
+      - Calculate the accuracy score
+      - Create the confusion matrix
+      - Print the imbalanced classification report
+
+### Findings
+#### Accuracy Score
+![Screenshot](https://github.com/Sborresch/Credit_Risk_Analysis/blob/main/AdaBoost%20Classifier/AdaBoost_Accuracy_Score.png)
+
+It is important to note the accuracy rate of each machine learning model as this is what will provide justification for using this model. According to Kirsten Barkved from the [obviously.ai company](https://www.obviously.ai/post/machine-learning-model-performance#:~:text=Good%20accuracy%20in%20machine%20learning,not%20only%20ideal%2C%20it%27s%20realistic.), an accuracy rate above 70% is great model performance. Therefore, we should look at accuracy scores within the 70%-100% range.
+
+This machine learning model shows a 93% accuracy rate, which falls within our chosen accuracy range. For this reason, this model is an option for us to use.
+
+#### Confusion Matrix
+![Screenshot](https://github.com/Sborresch/Credit_Risk_Analysis/blob/main/AdaBoost%20Classifier/AdaBoost_Confusion_Matrix.png)
+
+The confusion matrix can be complicated in understanding. However, a simple graph from [Anuganti Suresch from the Medium company](https://medium.com/analytics-vidhya/what-is-a-confusion-matrix-d1c0f8feda5) shows how to understand this matrix. This matrix's purpose is to define a models performance, especially those with imbalanced datasets. A good model should prove a matrix with a high TP ("True Positive") and TN ("True Negative") value. While having a low FP ("False Positive") and FN (False Negative) value.
+
+- TP = when actual and predicted is positive
+- TN = when actual and predicted is negative
+- FP = when actual is negative and predicted is positive
+- FN = when acutal is positive and predicted is negative
+
+Based on the Oversampling machine model we had a low TP, which is bad, and a high TN whigh is good. However, we had a low FN, which is good, but a high FP. Therefore, this model is inaccurately identifiying certain loans as risky, when they are not. This is a type I error. However, the matrix is the closest of the 6 to accuracy. Therefore, this confusion matrix proves fair to use this model.
+
+#### Classification Report
+![Screenshot](https://github.com/Sborresch/Credit_Risk_Analysis/blob/main/AdaBoost%20Classifier/AdaBoost_Classification_Report.png)
+
+The classification report is used to measure the quality of each model's prediction abilities. Similarly to the confusion matrix, it measures TP, TN, FP, FN. The main thing to mention with this report is having a high precision ("pre") for each target ("high_risk" and "low_risk"). Here is an external [link](https://muthu.co/understanding-the-classification-report-in-sklearn/#:~:text=A%20Classification%20report%20is%20used,classification%20report%20as%20shown%20below.) for more information on classification reports.
+
+Based on this model's classification report there is good predictability for low_risk credit loans but a poor predictability for high_risk credit loans. For this reason we will forgo using this model.
 
 # Summary
 Below is a synopis of each model's performance:
@@ -190,7 +258,8 @@ Below is a synopis of each model's performance:
   - SMOTE Oversampling: poor in accuracy score, poor in confusion matrix, poor in classification report
   - Undersampling: poor in accuracy score, poor in confusion matrix, poor in classification report
   - Combination Sampling: poor in accuracy score, poor in confusion matrix, poor in classification report
-  - Forest Classifier:
-  - AdaBoost Classifier:
+  - Forest Classifier: good in accuracy score, poor in confusion matrix, poor in classification report
+  - AdaBoost Classifier: good in accuracy score, fair in confusion matrix, poor in classification report
 
 ## Recommendation
+The recommendation for this credit risk project is that all 6 models did not perform satisfactory for all three tests (accuracy score, confusion matrix, classification report). However, if one model is needed to be used to provide a starting point for this project I would recommend the AdaBoost Classifier machine learning model. This recommendation is justified on the fact that it provided a good accuracy score, fair in confusion matrix, but poor in classification report. It is recommended to find a more accurate machine learning model for long run use of predicting credit risk for Jill.
