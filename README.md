@@ -36,8 +36,12 @@ We will utilize the following algorithms to build our model:
 
 It is important to note the accuracy rate of each machine learning model as this is what will provide justification for using this model. According to Kirsten Barkved from the [obviously.ai company](https://www.obviously.ai/post/machine-learning-model-performance#:~:text=Good%20accuracy%20in%20machine%20learning,not%20only%20ideal%2C%20it%27s%20realistic.), an accuracy rate above 70% is great model performance. Therefore, we should look at accuracy scores within the 70%-100% range.
 
+This machine learning model shows a 65% accuracy rate, which falls below our chosen accuracy range. For this reason, we will not use this model for our credit-risk prediction project.
+
 #### Confusion Matrix
 ![Screenshot](https://github.com/Sborresch/Credit_Risk_Analysis/blob/main/Oversampling/Confusion_Matrix.png)
+
+The confusion matrix can be complicated in understanding. However, a simple graph from [Anuganti Suresch from the Medium company](https://medium.com/analytics-vidhya/what-is-a-confusion-matrix-d1c0f8feda5) shows how to understand this matrix.
 
 #### Classification Report
 ![Screenshot](https://github.com/Sborresch/Credit_Risk_Analysis/blob/main/Oversampling/Confusion_Matrix.png)
