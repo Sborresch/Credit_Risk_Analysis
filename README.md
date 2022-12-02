@@ -21,14 +21,14 @@ We will utilize the following algorithms to build our model:
 ## Oversampling
 ### Steps to Build Model
   1. Create training and target variables 
-      a. Convert training variables to numerical values using get.dummies()
-      b. Create target variables
-      c. Check the balance of the target variables
+      - Convert training variables to numerical values using get.dummies()
+      - Create target variables
+      - Check the balance of the target variables
   4. Resample the Training Data
-      a. Make predictions using LogisticRegression classifier
-      b. Calculate the accuracy score
-      c. Create the confusion matrix
-      d. Print the imbalanced classification report
+      - Make predictions using LogisticRegression classifier
+      - Calculate the accuracy score
+      - Create the confusion matrix
+      - Print the imbalanced classification report
       
 ### Findings
   
