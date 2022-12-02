@@ -43,10 +43,10 @@ This machine learning model shows a 65% accuracy rate, which falls below our cho
 
 The confusion matrix can be complicated in understanding. However, a simple graph from [Anuganti Suresch from the Medium company](https://medium.com/analytics-vidhya/what-is-a-confusion-matrix-d1c0f8feda5) shows how to understand this matrix. This matrix's purpose is to define a models performance, especially those with imbalanced datasets. A good model should prove a matrix with a high TP ("True Positive") and TN ("True Negative") value. While having a low FP ("False Positive") and FN (False Negative) value.
 
-TP = when actual and predicted is positive
-TN = when actual and predicted is negative
-FP = when actual is negative and predicted is positive
-FN = when acutal is positive and predicted is negative
+- TP = when actual and predicted is positive
+- TN = when actual and predicted is negative
+- FP = when actual is negative and predicted is positive
+- FN = when acutal is positive and predicted is negative
 
 Based on the Oversampling machine model we had a low TP, which is bad, and a high TN whigh is good. However, we had a low FN, which is good, but a high FP. Therefore, this model is inaccurately identifiying certain loans as risky, when they are not. This is a type I error. Therefore, this confusion matrix proves to not use this model.
 
